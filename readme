@@ -1,29 +1,34 @@
-# swagger
+# api-swagger-docs
 
-Repositorio de ejemplo que integra Swagger UI para documentar rutas de un API de productos y carritos en un proyecto Node.js/Express.
+Documentación interactiva de una API (Products & Carts) usando **OpenAPI/Swagger** sobre Node.js/Express.
 
 ## 📚 Características
-- Documentación de endpoints REST con OpenAPI/Swagger.
-- YAML o JSON centralizado (`swagger.yaml`).
-- Integración con Swagger UI (`/api/docs`) en la aplicación Express.
-- Descripción de modelos (`Product`, `Cart`), parámetros y respuestas.
-- Rutas protegidas con middleware de autenticación (opcional).
+- Definición OpenAPI centralizada (`swagger.yaml`).
+- Swagger UI servido en `/api/docs`.
+- Esquemas de modelos (`Product`, `Cart`), parámetros, respuestas y ejemplos.
+- Soporte para auth (Bearer) listo para ampliar.
 
-## 🤟 Stack
+## 🤞 Stack
 - Node.js, Express
-- Swagger UI Express
-- YAML (swagger.yaml)
+- swagger-ui-express
+- YAML (OpenAPI 3)
 
-## 👨‍🔧 Instalación
-    git clone https://github.com/CastoGil/swagger.git
-    cd swagger
+## 🚀 Inicio rápido
+
     npm ci
-    npm start
+    npm run dev
+    # abre http://localhost:3000/api/docs
 
-## 🔍 Uso
-- Navega a `http://localhost:3000/api/docs` para ver la documentación interactiva.
-- Prueba las rutas de productos y carritos directamente desde la interfaz.
+## 📜 Estructura
 
-## ✍️ Cómo actualizar la documentación
-1. Edita `swagger.yaml` para agregar rutas, modelos o descripciones.
-2. Reinicia el servidor para ver los cambios.
+    /src
+      /routes
+      /middlewares
+    /swagger.yaml
+
+## ✍️ Mantenimiento de la spec
+- Agrega/actualiza paths y schemas en `swagger.yaml`.
+- Valida con un linter (ej. @redocly/cli) antes de hacer commit.
+
+## 👍 Licencia
+MIT
