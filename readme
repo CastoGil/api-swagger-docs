@@ -1,1 +1,29 @@
-Se creo la Documentacion a partir de swagger junto con yaml de los modulos de productos y carrito.. las rutas estan protegidas lo cual es necesario loguearse para poder acceder.. tanto para products como para carts.. 
+# swagger
+
+Repositorio de ejemplo que integra Swagger UI para documentar rutas de un API de productos y carritos en un proyecto Node.js/Express.
+
+## 📚 Características
+- Documentación de endpoints REST con OpenAPI/Swagger.
+- YAML o JSON centralizado (`swagger.yaml`).
+- Integración con Swagger UI (`/api/docs`) en la aplicación Express.
+- Descripción de modelos (`Product`, `Cart`), parámetros y respuestas.
+- Rutas protegidas con middleware de autenticación (opcional).
+
+## 🤟 Stack
+- Node.js, Express
+- Swagger UI Express
+- YAML (swagger.yaml)
+
+## 👨‍🔧 Instalación
+    git clone https://github.com/CastoGil/swagger.git
+    cd swagger
+    npm ci
+    npm start
+
+## 🔍 Uso
+- Navega a `http://localhost:3000/api/docs` para ver la documentación interactiva.
+- Prueba las rutas de productos y carritos directamente desde la interfaz.
+
+## ✍️ Cómo actualizar la documentación
+1. Edita `swagger.yaml` para agregar rutas, modelos o descripciones.
+2. Reinicia el servidor para ver los cambios.
